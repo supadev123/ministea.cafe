@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ministea Café – Let HIS Words brew in your Heart</title>
+<script>try{document.documentElement.classList.add('js');var s=localStorage.getItem('mt');if(s)document.documentElement.dataset.theme=s}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FBF7EF;--bg2:#F1E9DA;--ink:#2A1A10;--mute:#6F5F4B;--gold:#9A6B1E;--hi:#7A4F12;--line:rgba(122,79,18,.28);--glow:rgba(212,175,106,.38);
+--p1:#FFFFFF;--p2:#EDE6D8;--p3:#B3A790;--steam:rgba(120,95,60,.4);--shadow:rgba(60,35,15,.3);--btn:#FFFFFF;
+--serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;--sans:'Jost',system-ui,-apple-system,'Segoe UI',sans-serif;
+color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D0806;--bg2:#1C120C;--ink:#F3E7CF;--mute:#B5A488;--gold:#D4AF6A;--hi:#F0D9A0;--line:rgba(212,175,106,.28);--glow:rgba(212,175,106,.16);--p1:#FFFBF2;--p2:#E6DCC8;--p3:#8F8472;--steam:rgba(255,255,255,.55);--shadow:rgba(0,0,0,.65);--btn:#0D0806;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0D0806;--bg2:#1C120C;--ink:#F3E7CF;--mute:#B5A488;--gold:#D4AF6A;--hi:#F0D9A0;--line:rgba(212,175,106,.28);--glow:rgba(212,175,106,.16);--p1:#FFFBF2;--p2:#E6DCC8;--p3:#8F8472;--steam:rgba(255,255,255,.55);--shadow:rgba(0,0,0,.65);--btn:#0D0806;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{background:var(--bg);scroll-padding-top:80px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 17px/1.7 var(--sans);-webkit-font-smoothing:antialiased;transition:background .6s,color .6s;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:31;background:var(--bg)}
+a{color:inherit}:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.nav{position:fixed;z-index:30;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:calc(16px + env(safe-area-inset-top,0px)) 4vw 16px;background:linear-gradient(var(--bg),transparent)}
+.brand{font:500 26px var(--serif);letter-spacing:.05em;text-decoration:none}
+.nav ul{display:flex;gap:32px;list-style:none;margin:0 0 0 auto;padding:0;font-size:15px;color:var(--mute)}
+.nav ul a{text-decoration:none;transition:color .3s}.nav ul a:hover{color:var(--gold)}
+.tg{display:flex;align-items:center;gap:9px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:none;color:var(--ink);font:400 14px var(--sans);cursor:pointer;transition:border-color .3s}
+.tg:hover{border-color:var(--gold)}.tg svg{width:17px;height:17px;fill:none;stroke:var(--gold);stroke-width:1.6}
+.tg .tl{display:none}:root[data-theme="dark"] .tg .tl{display:inline}:root[data-theme="dark"] .tg .td{display:none}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .tg .tl{display:inline}:root:not([data-theme="light"]) .tg .td{display:none}}
+.hero{position:relative;min-height:100svh;display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:2vw;padding:120px 5vw 60px;overflow:hidden;background:radial-gradient(80% 75% at 68% 52%,var(--glow),transparent 70%)}
+h1,h2{font-family:var(--serif);font-weight:300;margin:0;letter-spacing:-.015em}
+h1{font-size:clamp(52px,7.4vw,118px);line-height:.98;margin-bottom:26px}
+.lead{color:var(--mute);max-width:40ch;margin:0;font-size:18px}
+.w{display:inline-block;margin-right:.2em;opacity:0;filter:blur(14px);transform:translateY(20px);animation:word 1.5s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(.4s + var(--i)*.26s)}
+@keyframes word{to{opacity:1;filter:none;transform:none}}
+.stage{position:relative;display:flex;flex-direction:column;align-items:center}
+.cup{width:min(100%,640px);overflow:visible;display:block}
+.cup{--cof:#2A1409;--cof2:#6B3A18}
+.cup[data-d=e]{--cof:#1d0c05;--cof2:#55290f}.cup[data-d=t]{--cof:#8E4F1C;--cof2:#d08a3a}
+.cup:not([data-d=l]) :is(.milk,.s2,.art){display:none}
+.cup *{transform-box:fill-box;transform-origin:center}
+.play .ring{animation:rot 90s linear infinite}.play .ring.b{animation-duration:140s;animation-direction:reverse}
+.play .bn{animation:fl 7s ease-in-out infinite}.play .bn.b{animation-delay:-2.5s}.play .bn.c{animation-delay:-4.5s}
+.play .cof{animation:grow 3.6s cubic-bezier(.3,.6,.3,1) .5s both}
+.play .milk{animation:grow 2.2s cubic-bezier(.3,.6,.3,1) 4.4s both}
+.play .lf{animation:grow .9s cubic-bezier(.3,.8,.3,1) both;animation-delay:calc(6.4s + var(--k)*.32s)}
+.play .pull{stroke-dasharray:1;animation:draw .9s ease 8s both}
+.play .st{stroke-dasharray:200;animation:pour 3.8s ease .3s both}.play .st.s2{animation:pour 2.4s ease 4.1s both}
+.play .rip{animation:rip .9s ease-out 1s 4}
+.play .sm{animation:sm 6s ease-in-out infinite both;animation-delay:calc(3s + var(--k)*1.3s)}
+.play .sh{animation:sheen 8s ease-in-out 4s infinite}
+.play .sp{animation:tw 3.4s ease-in-out infinite;animation-delay:calc(var(--k)*.8s)}
+.st{fill:none;stroke-linecap:round;opacity:0}.sm{fill:none;stroke:var(--steam);stroke-width:9;stroke-linecap:round;opacity:0}.rip{fill:none;stroke:#fff;stroke-opacity:.0}
+@keyframes grow{from{transform:scale(0)}}@keyframes draw{from{stroke-dashoffset:1}}
+@keyframes pour{0%{opacity:0;stroke-dashoffset:200}12%{opacity:1;stroke-dashoffset:0}85%{opacity:1;stroke-dashoffset:0}100%{opacity:0;stroke-dashoffset:-200}}
+@keyframes rip{from{transform:scale(.2);stroke-opacity:.7}to{transform:scale(1.1);stroke-opacity:0}}
+@keyframes sm{0%{opacity:0;transform:translateY(34px) scaleX(.8)}30%{opacity:.7}100%{opacity:0;transform:translateY(-70px) scaleX(1.25)}}
+@keyframes sheen{0%{transform:translateX(0) skewX(-16deg)}55%,100%{transform:translateX(640px) skewX(-16deg)}}
+@keyframes rot{to{transform:rotate(360deg)}}@keyframes fl{50%{transform:translateY(-14px) rotate(14deg)}}
+@keyframes tw{0%,100%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1) rotate(45deg)}}
+.cap{margin:6px 0 18px;font:300 italic 24px var(--serif);color:var(--hi);text-align:center;min-height:1.5em}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.chip{padding:10px 22px;border:1px solid var(--line);border-radius:999px;background:none;color:var(--ink);font:300 15px var(--sans);cursor:pointer;transition:background .3s,color .3s,border-color .3s}
+.chip:hover{border-color:var(--gold)}.chip[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:var(--btn)}
+.btn{display:inline-block;position:relative;overflow:hidden;padding:16px 36px;border:1px solid var(--gold);border-radius:999px;text-decoration:none;font:400 16px var(--sans);letter-spacing:.03em;color:var(--ink);transition:background .4s,color .4s}
+.btn:hover{background:var(--line)}.btn.s{background:linear-gradient(120deg,var(--gold),var(--hi),var(--gold));background-size:200%;color:var(--btn);animation:gl 6s ease-in-out infinite}
+@keyframes gl{50%{background-position:100% 0}}
+section{padding-block:clamp(90px,12vw,170px)}.wrap{width:min(1120px,100% - 48px);margin-inline:auto}
+h2.t{font-size:clamp(42px,6vw,88px);line-height:1;margin-bottom:20px}
+.menu{margin-top:56px;border-top:1px solid var(--line)}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:22px 0;border-bottom:1px solid var(--line);background:linear-gradient(90deg,var(--glow),transparent) no-repeat 0 100%/0 100%;transition:background-size .7s cubic-bezier(.2,.7,.2,1),padding .5s}
+.row:hover{background-size:100% 100%;padding-inline:18px}
+.row b{font:300 clamp(30px,4.4vw,58px)/1.05 var(--serif);transition:color .4s}.row:hover b{color:var(--gold)}
+.row span{color:var(--mute);font-size:15px;text-align:right;max-width:28ch}
+@keyframes dr{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.jr{text-align:center;overflow:hidden}.jr .lead{margin:0 auto}
+.jv{width:min(1000px,100%);display:block;margin:56px auto 0;overflow:visible}.jv *{transform-box:fill-box;transform-origin:center}
+.jv text{font:300 36px var(--serif);fill:var(--ink);text-anchor:middle}
+.jv .ln{fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round}.jv .nd{fill:var(--bg);stroke:var(--gold);stroke-width:2}
+.jv .g1{fill:none;stroke:var(--gold);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.js .jv .ln{stroke-dasharray:1;stroke-dashoffset:1}.js .jv .nd,.js .jv .ic{opacity:0}
+.tr{fill:var(--gold);opacity:0;offset-path:path('M60 230H940');offset-distance:0%}
+.in .jv .ln{animation:dr 3.2s cubic-bezier(.5,0,.2,1) .2s forwards}
+.in .jv .nd{animation:pop .6s ease calc(.6s + var(--k)*.8s) forwards}
+.in .jv .ic{animation:icin 1s cubic-bezier(.2,.8,.2,1) calc(.4s + var(--k)*.8s) forwards}
+.in .jv .rg{animation:rot 120s linear infinite}.in .jv .rg.b{animation-direction:reverse;animation-duration:180s}
+.in .tr{animation:trv 7s ease-in-out 3.6s infinite}
+.in .bean{animation:wob 5s ease-in-out 1.4s infinite}.in .fl{animation:flk 1.3s ease-in-out 2.2s infinite alternate;transform-origin:50% 100%}
+.in .dp{animation:drp 2s ease-in 3s infinite}.in .sm2{animation:st2 3s ease-in-out 4s infinite}.in .sm2.b{animation-delay:5.2s}
+@keyframes icin{from{opacity:0;transform:translateY(24px) scale(.6)}to{opacity:1;transform:none}}
+@keyframes trv{0%{offset-distance:0%;opacity:0}8%{opacity:1}92%{opacity:1}100%{offset-distance:100%;opacity:0}}
+@keyframes wob{50%{transform:rotate(14deg) scale(1.06)}}@keyframes flk{to{transform:scaleY(1.12) scaleX(.93) skewX(-5deg)}}
+@keyframes drp{0%{transform:translateY(-8px) scale(.6);opacity:0}15%{opacity:1;transform:none}85%{opacity:1}100%{transform:translateY(34px);opacity:0}}
+@keyframes st2{0%{opacity:0;transform:translateY(8px)}40%{opacity:.9}100%{opacity:0;transform:translateY(-16px)}}
+.verse{background:var(--bg2);text-align:center;transition:background .6s}
+.q{font:300 clamp(34px,5vw,70px)/1.14 var(--serif);max-width:20ch;margin:34px auto 26px}
+.q .w{animation-play-state:paused;animation-delay:calc(var(--i)*.12s)}.q.in .w{animation-play-state:running}
+.ref{font:italic 300 24px var(--serif);color:var(--gold);margin:0}
+.orn{width:min(300px,70%);display:block;margin:0 auto;overflow:visible}.orn path,.orn circle{fill:none;stroke:var(--gold);stroke-width:1.2}
+.js .orn path{stroke-dasharray:1;stroke-dashoffset:1}.js .orn circle{opacity:0}
+.in .orn path{animation:dr 2.2s ease forwards}.in .orn circle{animation:pop .8s ease 1.8s forwards}@keyframes pop{to{opacity:1}}
+.cta{position:relative;text-align:center;overflow:hidden;background:radial-gradient(70% 90% at 50% 100%,var(--glow),transparent 70%)}
+.cta h2{font-size:clamp(46px,7vw,108px);line-height:1;margin-bottom:22px}.cta .lead{margin:0 auto 14px}
+.cta address{font:300 clamp(22px,2.6vw,32px)/1.3 var(--serif);font-style:normal;margin-bottom:36px}
+.btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}
+.cta small{color:var(--mute);font-size:15px}
+footer{text-align:center;padding:36px 24px calc(60px + env(safe-area-inset-bottom,0px));font:300 23px var(--serif);color:var(--mute);border-top:1px solid var(--line)}
+footer span{display:block;font:300 13px var(--sans);margin-top:10px;letter-spacing:.06em}
+@media(max-width:860px){.nav ul{display:none}.hero{grid-template-columns:1fr;text-align:center;padding-top:110px}.lead{margin-inline:auto}.row span{display:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.w{opacity:1;filter:none;transform:none}.sm{opacity:.35}.js .orn path,.js .jv .ln{stroke-dashoffset:0}.js .orn circle,.js .jv .nd,.js .jv .ic{opacity:1}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav class="nav"><a class="brand" href="#top">Ministea Café</a>
+<ul><li><a href="#menu">Counter</a></li><li><a href="#verse">Verse</a></li><li><a href="#visit">Visit</a></li></ul>
+<button class="tg" id="tg" type="button" aria-label="Switch colour theme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><span class="tl">Light</span><span class="td">Dark</span></button></nav>
+
+<header class="hero" id="top">
+<div>
+<h1 aria-label="Let HIS Words brew in your Heart."><span class="w" style="--i:0" aria-hidden="true">Let</span><span class="w" style="--i:1" aria-hidden="true">HIS</span><span class="w" style="--i:2" aria-hidden="true">Words</span><br><span class="w" style="--i:3" aria-hidden="true">brew</span><span class="w" style="--i:4" aria-hidden="true">in</span><span class="w" style="--i:5" aria-hidden="true">your</span><span class="w" style="--i:6" aria-hidden="true">Heart.</span></h1>
+<p class="lead">A café at Arcade San Jose, Rodriguez. Coffee, tea and cake, made to be shared with the people beside you.</p>
+</div>
+<div class="stage">
+<svg class="cup play" id="cup" data-d="l" viewBox="0 -100 560 600" role="img" aria-label="A porcelain cup on a saucer being filled with coffee and milk, finished with latte art">
+<defs>
+<symbol id="bean" viewBox="0 0 60 40"><ellipse cx="30" cy="20" rx="26" ry="16" fill="#6B3A18" stroke="#D4AF6A" stroke-opacity=".6"/><path d="M6 20C18 10 42 30 54 20" fill="none" stroke="#241107" stroke-width="3" stroke-linecap="round"/></symbol>
+<linearGradient id="bd"><stop offset="0" style="stop-color:var(--p3)"/><stop offset=".2" style="stop-color:var(--p2)"/><stop offset=".48" style="stop-color:var(--p1)"/><stop offset=".82" style="stop-color:var(--p2)"/><stop offset="1" style="stop-color:var(--p3)"/></linearGradient>
+<radialGradient id="sc"><stop offset=".35" style="stop-color:var(--p1)"/><stop offset="1" style="stop-color:var(--p2)"/></radialGradient>
+<radialGradient id="cf"><stop offset="0" style="stop-color:var(--cof2)"/><stop offset="1" style="stop-color:var(--cof)"/></radialGradient>
+<radialGradient id="mk"><stop offset="0" stop-color="#F8EDD6"/><stop offset=".65" stop-color="#E7CFA6"/><stop offset="1" stop-color="#E7CFA6" stop-opacity="0"/></radialGradient>
+<linearGradient id="dp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity=".5"/><stop offset=".5" stop-color="#000" stop-opacity="0"/></linearGradient>
+<clipPath id="rc"><ellipse cx="280" cy="172" rx="118" ry="33"/></clipPath>
+<clipPath id="bc"><path d="M150 172C154 275 200 362 280 366C360 362 406 275 410 172A130 40 0 0 1 150 172Z"/></clipPath>
+<filter id="b6" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+<filter id="b9" x="-50%" y="-100%" width="200%" height="300%"><feGaussianBlur stdDeviation="9"/></filter>
+</defs>
+<circle class="ring" cx="280" cy="260" r="255" fill="none" stroke="#D4AF6A" stroke-opacity=".55" stroke-dasharray="2 16" stroke-width="2"/>
+<circle class="ring b" cx="280" cy="260" r="222" fill="none" stroke="#D4AF6A" stroke-opacity=".4" stroke-dasharray="90 40 6 40"/>
+<g transform="translate(30 50)"><use class="bn" href="#bean" width="60" height="40"/></g><g transform="translate(470 10)"><use class="bn b" href="#bean" width="54" height="36"/></g><g transform="translate(14 340)"><use class="bn c" href="#bean" width="50" height="34"/></g><g transform="translate(490 350)"><use class="bn b" href="#bean" width="58" height="38"/></g>
+<ellipse cx="280" cy="418" rx="225" ry="22" style="fill:var(--shadow)" filter="url(#b9)"/>
+<ellipse cx="280" cy="394" rx="218" ry="50" style="fill:var(--p3)"/>
+<ellipse cx="280" cy="382" rx="218" ry="50" fill="url(#sc)" stroke="#D4AF6A" stroke-opacity=".7" stroke-width="1.6"/>
+<ellipse cx="280" cy="380" rx="130" ry="28" style="fill:var(--p2);stroke:var(--p3)" stroke-opacity=".6"/>
+<ellipse cx="280" cy="380" rx="84" ry="15" style="fill:var(--shadow)" opacity=".7" filter="url(#b6)"/>
+<path d="M392 200C478 186 486 306 380 316" fill="none" stroke-width="26" stroke-linecap="round" style="stroke:var(--p3)"/>
+<path d="M392 200C478 186 486 306 380 316" fill="none" stroke-width="11" stroke-linecap="round" style="stroke:var(--p1)"/>
+<ellipse cx="280" cy="368" rx="60" ry="11" style="fill:var(--p3)"/>
+<path d="M150 172C154 275 200 362 280 366C360 362 406 275 410 172A130 40 0 0 1 150 172Z" fill="url(#bd)"/>
+<g clip-path="url(#bc)"><rect class="sh" x="-140" y="150" width="46" height="240" fill="#fff" opacity=".5" filter="url(#b6)"/><path d="M178 205C184 275 212 330 250 352" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="7" stroke-linecap="round"/></g>
+<ellipse cx="280" cy="172" rx="130" ry="40" stroke="#D4AF6A" stroke-width="2.2" style="fill:var(--p1)"/>
+<ellipse cx="280" cy="172" rx="118" ry="33" style="fill:var(--p2)"/>
+<g clip-path="url(#rc)">
+<ellipse class="cof" cx="280" cy="172" rx="118" ry="33" fill="url(#cf)"/>
+<ellipse class="milk" cx="280" cy="174" rx="86" ry="23" fill="url(#mk)"/>
+<g class="art"><ellipse class="lf" style="--k:0" cx="280" cy="183" rx="56" ry="14" fill="#F8EDD6" stroke="#5a2f14" stroke-width="2.4"/><ellipse class="lf" style="--k:1" cx="280" cy="176" rx="44" ry="11" fill="#F8EDD6" stroke="#5a2f14" stroke-width="2.4"/><ellipse class="lf" style="--k:2" cx="280" cy="169" rx="32" ry="8" fill="#F8EDD6" stroke="#5a2f14" stroke-width="2.4"/><ellipse class="lf" style="--k:3" cx="280" cy="163" rx="20" ry="5" fill="#F8EDD6" stroke="#5a2f14" stroke-width="2"/><path class="pull" pathLength="1" d="M280 196V156" fill="none" stroke="#5a2f14" stroke-width="2.4" stroke-linecap="round"/></g>
+<ellipse cx="280" cy="172" rx="118" ry="33" fill="url(#dp)"/>
+</g>
+<ellipse class="rip" cx="280" cy="172" rx="60" ry="16"/>
+<ellipse cx="280" cy="172" rx="130" ry="40" fill="none" stroke="#D4AF6A" stroke-width="2.2"/>
+<path class="st" d="M280 -20V172" stroke-width="9" style="stroke:var(--cof)"/>
+<path class="st s2" d="M296 -20C296 70 284 100 280 172" stroke-width="7" stroke="#F6E9CF"/>
+<g filter="url(#b6)"><path class="sm" style="--k:0" d="M232 140C206 100 256 70 230 20S252 -40 234 -80"/><path class="sm" style="--k:1" d="M272 140C246 100 296 70 270 20S292 -40 274 -80"/><path class="sm" style="--k:2" d="M312 140C286 100 336 70 310 20S332 -40 314 -80"/><path class="sm" style="--k:3" d="M348 140C324 100 370 70 346 20S366 -40 350 -80"/></g>
+<g transform="translate(110 70)"><path class="sp" style="--k:0" fill="#D4AF6A" d="M0-10L2-2 10 0 2 2 0 10-2 2-10 0-2-2Z"/></g><g transform="translate(450 120)"><path class="sp" style="--k:1" fill="#D4AF6A" d="M0-8L2-2 8 0 2 2 0 8-2 2-8 0-2-2Z"/></g><g transform="translate(70 270)"><path class="sp" style="--k:2" fill="#D4AF6A" d="M0-7L2-2 7 0 2 2 0 7-2 2-7 0-2-2Z"/></g><g transform="translate(500 250)"><path class="sp" style="--k:3" fill="#D4AF6A" d="M0-9L2-2 9 0 2 2 0 9-2 2-9 0-2-2Z"/></g>
+</svg>
+<p class="cap" id="cap" aria-live="polite">Café latte. Soft milk, finished with a tulip.</p>
+<div class="chips" id="chips" role="group" aria-label="Choose a drink to pour"></div>
+</div>
+</header>
+
+<section id="menu"><div class="wrap">
+<h2 class="t">On the counter</h2><p class="lead">Brewed to order, baked to share. Ask us about today’s menu.</p>
+<div class="menu">
+<div class="row"><b>Espresso</b><span>Short, dark and steady</span></div>
+<div class="row"><b>Café latte</b><span>Soft milk, smooth foam</span></div>
+<div class="row"><b>Cold brew</b><span>Slow, cool and clean</span></div>
+
+<div class="row"><b>Cakes and donuts</b><span>By the slice, made for sharing</span></div>
+<div class="row"><b>Gift boxes</b><span>Wrapped in gold, ready to give</span></div>
+</div></div></section>
+
+<section class="jr" id="jr"><div class="wrap">
+<h2 class="t">From bean to cup.</h2><p class="lead">Four small steps, none of them rushed.</p>
+<svg class="jv" viewBox="0 0 1000 330" role="img" aria-label="Four steps: a bean is picked, roasted over a flame, brewed drop by drop, and poured into a cup">
+<circle class="rg" cx="500" cy="170" r="330" fill="none" stroke="#D4AF6A" stroke-opacity=".35" stroke-dasharray="2 14" stroke-width="2"/>
+<circle class="rg b" cx="500" cy="170" r="270" fill="none" stroke="#D4AF6A" stroke-opacity=".3" stroke-dasharray="80 30 6 30"/>
+<path class="ln" pathLength="1" d="M60 230H940"/>
+<circle class="nd" style="--k:0" cx="125" cy="230" r="9"/><circle class="nd" style="--k:1" cx="375" cy="230" r="9"/><circle class="nd" style="--k:2" cx="625" cy="230" r="9"/><circle class="nd" style="--k:3" cx="875" cy="230" r="9"/>
+<circle class="tr" r="14" fill-opacity=".45" style="filter:blur(5px)"/><circle class="tr" r="5"/>
+<g transform="translate(125 120)"><g class="ic" style="--k:0"><g class="bean"><g transform="rotate(-25)"><ellipse rx="46" ry="31" fill="#6B3A18" stroke="#D4AF6A" stroke-width="2"/><path d="M-40 0C-20-16 20 16 40 0" fill="none" stroke="#241107" stroke-width="5" stroke-linecap="round"/><ellipse cx="-16" cy="-15" rx="12" ry="4" fill="#fff" fill-opacity=".25"/></g></g></g></g>
+<g transform="translate(375 120)"><g class="ic" style="--k:1"><g class="fl"><path d="M0-52C20-24 40-10 36 16C32 40 14 50 0 50C-16 50-34 40-36 16C-38-6-18-16 0-52Z" fill="#D4AF6A"/><path d="M0-10C12 8 22 14 20 28C18 40 8 44 0 44C-8 44-18 40-20 28C-22 16-8 10 0-10Z" fill="#F0D9A0"/></g></g></g>
+<g transform="translate(625 120)"><g class="ic" style="--k:2"><path class="g1" d="M-44-44H44L18 0H-18Z"/><circle class="dp" cx="0" cy="14" r="5" fill="#D4AF6A"/><path class="g1" d="M-32 34H32L25 58H-25Z"/></g></g>
+<g transform="translate(875 120)"><g class="ic" style="--k:3"><path class="g1" d="M-38 0H38C38 36 20 54 0 54C-20 54-38 36-38 0Z"/><path class="g1" d="M38 10C64 10 64 38 34 38"/><path class="g1 sm2" d="M-12-8C-20-20-4-26-12-40"/><path class="g1 sm2 b" d="M10-8C2-20 18-26 10-40"/></g></g>
+<text x="125" y="300">Picked</text><text x="375" y="300">Roasted</text><text x="625" y="300">Brewed</text><text x="875" y="300">Poured</text>
+</svg>
+</div></section>
+
+<section class="verse" id="verse"><div class="wrap" id="vw">
+<svg class="orn" viewBox="0 0 300 30" aria-hidden="true"><path pathLength="1" d="M0 15H128M172 15H300"/><circle cx="150" cy="15" r="5"/></svg>
+<blockquote style="margin:0"><p class="q" id="q">“How sweet are thy words unto my taste! yea, sweeter than honey to my mouth!”</p>
+<p class="ref">Psalm 119:103</p></blockquote>
+</div></section>
+
+<section class="cta" id="visit"><div class="wrap">
+<h2>Come sit with us.</h2>
+<p class="lead">Your cup is poured slowly, and there is always a seat.</p>
+<address style="margin-top:22px">Stall 24 &amp; 25 Sub Urban<br>Arcade San Jose<br>Rodriguez, 1860</address>
+<div class="btns"><a class="btn s" href="tel:+639773715026">Call 0977 371 5026</a><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Arcade+San+Jose+Rodriguez+Rizal" target="_blank" rel="noopener">Get directions</a></div>
+<small>Message Ministea Café on Facebook for today’s hours.</small>
+</div></section>
+<footer>“O taste and see that the LORD is good.”<span>Psalm 34:8 · Ministea Café, brewing since 2021</span></footer>
+
+<script>
+(function(){
+var d=document.documentElement,cup=document.getElementById('cup'),cap=document.getElementById('cap'),ch=document.getElementById('chips');
+document.getElementById('tg').onclick=function(){var dark=d.dataset.theme?d.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches,n=dark?'light':'dark';d.dataset.theme=n;try{localStorage.setItem('mt',n)}catch(e){}};
+var D=[['e','Espresso','Espresso. Short, dark and steady.'],['l','Café latte','Café latte. Soft milk, finished with a tulip.'],['t','Black tea','Black tea. Bright and amber.']];
+D.forEach(function(x){var b=document.createElement('button');b.type='button';b.className='chip';b.textContent=x[1];b.setAttribute('aria-pressed',x[0]==='l');
+b.onclick=function(){cup.dataset.d=x[0];cap.textContent=x[2];[].forEach.call(ch.children,function(c){c.setAttribute('aria-pressed',c===b)});cup.classList.remove('play');void cup.getBoundingClientRect();cup.classList.add('play')};ch.appendChild(b)});
+var q=document.getElementById('q'),t=q.textContent.split(' ');q.setAttribute('aria-label',q.textContent);q.innerHTML=t.map(function(w,i){return '<span class="w" style="--i:'+i+'" aria-hidden="true">'+w+'</span>'}).join(' ');
+var jr=document.getElementById('jr');if('IntersectionObserver' in window){new IntersectionObserver(function(e,o){if(e[0].isIntersecting){jr.classList.add('in');o.disconnect()}},{threshold:.3}).observe(jr)}else jr.classList.add('in');
+var vw=document.getElementById('vw');
+if('IntersectionObserver' in window){new IntersectionObserver(function(e,o){if(e[0].isIntersecting){vw.classList.add('in');q.classList.add('in');o.disconnect()}},{threshold:.35}).observe(vw)}else{vw.classList.add('in');q.classList.add('in')}
+})();
+</script>
+</body>
+</html>
